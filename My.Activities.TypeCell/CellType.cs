@@ -89,6 +89,8 @@ namespace My.Activities.TypeCell
 
         private void TipCell(string target, int format)
         {
+            worksheet.Cell(target).Value = Convert.ToDecimal(worksheet.Cell(target).Value);
+
             if (format > 11)
                 worksheet.Cell(target).SetDataType(XLDataType.DateTime);
             else if(format >1)
@@ -108,6 +110,12 @@ namespace My.Activities.TypeCell
             {
                 rangeXL = worksheet.Range(range[0].ToUpper(), range[1].ToUpper());
             }
+
+            foreach (var t in e.Cells())
+            {
+                t.Value = Convert.ToDecimal(t.Value);
+            }
+
             if (format > 11)
                 worksheet.Cell(target).SetDataType(XLDataType.DateTime);
             else if (format > 1)
