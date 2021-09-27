@@ -89,6 +89,10 @@ namespace My.Activities.TypeCell
 
         private void TipCell(string target, int format)
         {
+            if (format > 11)
+                worksheet.Cell(target).SetDataType(XLDataType.DateTime);
+            else if(format >1)
+                worksheet.Cell(target).SetDataType(XLDataType.Number);
             worksheet.Cell(target).Style.NumberFormat.NumberFormatId = format; 
         }
         private void TipRange(string target, int format)
@@ -104,6 +108,10 @@ namespace My.Activities.TypeCell
             {
                 rangeXL = worksheet.Range(range[0].ToUpper(), range[1].ToUpper());
             }
+            if (format > 11)
+                worksheet.Cell(target).SetDataType(XLDataType.DateTime);
+            else if (format > 1)
+                worksheet.Cell(target).SetDataType(XLDataType.Number);
             rangeXL.Style.NumberFormat.NumberFormatId = format;
         }
         private string GetAlfb(int num)
