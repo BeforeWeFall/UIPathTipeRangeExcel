@@ -111,9 +111,9 @@ namespace My.Activities.TypeCell
                 rangeXL = worksheet.Range(range[0].ToUpper(), range[1].ToUpper());
             }
 
-            foreach (var t in e.Cells())
+            foreach (var cell in rangeXL.Cells())
             {
-                t.Value = Convert.ToDecimal(t.Value);
+                cell.Value = Convert.ToDecimal(cell.Value);
             }
 
             if (format > 11)
