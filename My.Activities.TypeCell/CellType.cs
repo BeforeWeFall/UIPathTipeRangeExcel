@@ -55,6 +55,7 @@ namespace My.Activities.TypeCell
             string path = Regex.Replace(PathExcel.Get(context), @"[^\P{C}\n]+","");
             string sheetName = SheetName.Get(context);
             string cell = Cell.Get(context);
+
             SetTip(path, sheetName, cell, (int)Type);
         }
 
@@ -93,8 +94,11 @@ namespace My.Activities.TypeCell
 
             if (format > 11)
                 worksheet.Cell(target).SetDataType(XLDataType.DateTime);
-            else if(format >1)
+            else if(format > 1)
+            {
+                worksheet.Cell(target).Value = Convert.ToDecimal(worksheet.Cell(target).Value);
                 worksheet.Cell(target).SetDataType(XLDataType.Number);
+            }               
             worksheet.Cell(target).Style.NumberFormat.NumberFormatId = format; 
         }
         private void TipRange(string target, int format)
@@ -111,15 +115,19 @@ namespace My.Activities.TypeCell
                 rangeXL = worksheet.Range(range[0].ToUpper(), range[1].ToUpper());
             }
 
-            foreach (var cell in rangeXL.Cells())
-            {
-                cell.Value = Convert.ToDecimal(cell.Value);
-            }
+            
 
             if (format > 11)
-                worksheet.Cell(target).SetDataType(XLDataType.DateTime);
-            else if (format > 1)
-                worksheet.Cell(target).SetDataType(XLDataType.Number);
+                rangeXL.SetDataType(XLDataType.DateTime);
+            else if (format > 0)
+            {
+                foreach (var cell in rangeXL.Cells())
+                {
+                    cell.Value = Convert.ToDecimal(cell.Value);
+                }
+                rangeXL.SetDataType(XLDataType.Number);
+            }
+                
             rangeXL.Style.NumberFormat.NumberFormatId = format;
         }
         private string GetAlfb(int num)

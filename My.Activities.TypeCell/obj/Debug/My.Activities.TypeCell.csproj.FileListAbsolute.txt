@@ -9,8 +9,8 @@ C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\bin
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\bin\Debug\ClosedXML.xml
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\bin\Debug\ExcelNumberFormat.xml
-C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.csprojAssemblyReference.cache
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.csproj.CoreCompileInputs.cache
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.csproj.CopyComplete
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.dll
 C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.pdb
+C:\Users\ULBelykh\source\repos\My.Activities.TypeCell\My.Activities.TypeCell\obj\Debug\My.Activities.TypeCell.csproj.AssemblyReference.cache
